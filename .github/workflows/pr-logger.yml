@@ -10,5 +10,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: snic104/actions-destination
+          token: ${{ secrets.SNIC104_TOKEN }}
       - name: List
         run: ls
