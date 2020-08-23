@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - name: Install jq
-        run: sudo apt install jq
       - name: Checkout from the log repository
         uses: actions/checkout@v2
         with:
@@ -21,3 +19,5 @@ jobs:
           token: ${{ secrets.SNIC104_TOKEN }}
       - name: List
         run: ls
+      - name: Output
+        run: echo ${{ github.head_ref }} ${{ github.base_ref }}
