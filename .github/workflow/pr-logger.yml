@@ -1,0 +1,14 @@
+name: PR Logger
+on: [push]
+
+jobs:
+  build:
+    name: Getting current PR log
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout from the log repository
+        uses: actions/checkout@v2
+        with:
+          repository: snic104/actions-destination
+      - name: List
+        run: ls
