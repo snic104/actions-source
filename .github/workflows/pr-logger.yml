@@ -1,9 +1,10 @@
 name: PR Logger
 
 on:
-  push:
-    brnaches:
+  pull_request:
+    branches:
       - master
+    types: [closed]
 
 jobs:
   build:
