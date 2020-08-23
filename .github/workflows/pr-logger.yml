@@ -6,6 +6,8 @@ jobs:
     name: Getting current PR log
     runs-on: ubuntu-latest
     steps:
+      - name: Install jq
+        run: sudo apt install jq
       - name: Checkout from the log repository
         uses: actions/checkout@v2
         with:
